@@ -1,0 +1,16 @@
+<form  [formGroup]="loginform">
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="text" class="form-control" formControlName="email">
+    <div *ngIf="loginform.controls.email.touched && loginform.controls.email.invalid" class="text-danger">
+      <div *ngIf="loginform.controls.email.errors.required">Email is required.</div>
+      <div *ngIf="loginform.controls.email.errors.email">Email seems invalid.</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>password</label>
+    <input type="text" class="form-control" formControlName="password">
+  </div>
+  <button class="btn btn-outline-danger">connexion</button>
+</form>

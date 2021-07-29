@@ -1,0 +1,15 @@
+<div class="container" *ngIf="lescontact">
+  <table class="table">
+    <tr>
+      <th>id</th>
+      <th>nom</th>
+      <th>prenom</th>
+      <th>Date de naissance</th>
+      <th>email</th>
+      <th>téléphone</th>
+    </tr>
+      <!--app-contact-item [contact]="c" (contactsEventEmitter)="onActionEvent($event)" *ngFor="let c of lescontact" style="display: contents"-->
+      <app-contact-item  [contact]="c" *ngFor="let c of lescontact" style="display: contents">
+      </app-contact-item>
+  </table>
+</div>

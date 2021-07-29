@@ -1,0 +1,36 @@
+<div class="container" *ngIf="Contactformgroup">
+  <form [formGroup]= "Contactformgroup">
+    <div class="form-group">
+      <label>Id</label>
+      <input type="text" class="form-control" formControlName="id">
+    </div>
+    <div class="form-group">
+      <label>Nom</label>
+      <input type="text" class="form-control" formControlName="nom"  [ngClass]="{'is-invalid': submitted}">
+    <div  *ngIf="Contactformgroup.controls.nom.invalid && submitted"
+          class="alert alert-danger">
+      <div *ngIf= "Contactformgroup.controls.nom.errors.required" >Nom est obligatoire</div>
+      <div *ngIf="Contactformgroup.controls.nom.errors.minlength">
+        Name must be at least 4 characters long.
+      </div>
+    </div>
+    </div>
+    <div class="form-group">
+      <label>Prenom</label>
+      <input type="text" class="form-control" formControlName="prenom">
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label>Teléphone</label>
+      <input type="text" class="form-control" formControlName="tel">
+    </div>
+    <div class="form-group">
+      <label>Mot de passe </label>
+      <input type="text" class="form-control" formControlName="password">
+    </div>
+    <button class="btn btn-success" (click)="onSave()">save</button>
+  </form>
+</div>

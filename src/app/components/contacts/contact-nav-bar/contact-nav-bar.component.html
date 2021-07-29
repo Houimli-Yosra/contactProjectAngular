@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <ul class="navbar navbar-nav">
+    <li>
+      <button class="btn btn-outline-info" (click)="getAll()">All</button>
+    </li>
+    <li>
+      <button class="btn btn-outline-info">selected</button>
+    </li>
+    <li>
+      <button class="btn btn-outline-info" (click)="onNewContact()">nouveau contact</button>
+    </li>
+  </ul>
+  <ul class="navbar navbar-nav ml-auto">
+    <li>
+      <!--form #f="ngForm" (ngSubmit)="onSearch(f.value)" class="form-inline">
+
+        <input ngModel name="keyword" class="form-check-input" type="text">
+        <span class="fa fa-search "></span>
+
+      </form-->
+      <input type="text"  [(ngModel)]="message">
+      <button class="btn btn-sm btn-danger"  (click)="onSearch(message)">
+        <span class="fa fa-search"></span>
+      </button>
+    </li>
+
+  </ul>
+</nav>

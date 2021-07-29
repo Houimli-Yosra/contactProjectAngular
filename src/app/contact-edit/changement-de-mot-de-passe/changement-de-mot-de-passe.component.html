@@ -1,0 +1,9 @@
+<div class="container" *ngIf="formgroup">
+  <form [formGroup]="formgroup" >
+    <div class="form-group">
+    <label> Nouveau Mot de passe </label>
+    <input type="text" class="form-control" formControlName="nvMdp">
+    </div>
+    <button type="submit"  class="btn btn-outline-primary" (click)="Onsave()">Save</button>
+  </form>
+</div>

@@ -1,0 +1,8 @@
+<!--app-contact-nav-bar (contacteventEmitter)="onActionEvent($event)"></app-contact-nav-bar -->
+<app-contact-nav-bar></app-contact-nav-bar>
+<input type="text"  [(ngModel)]="message">
+<button class="btn btn-sm btn-danger"  (click)="onSearch(message)">
+  <span class="fa fa-search"></span>
+</button>
+<!--app-contact-list [lescontact]="lescontact" (contactsEventEmitter)="onActionEvent($event)"></app-contact-list -->
+<app-contact-list [lescontact]="lescontact"></app-contact-list>

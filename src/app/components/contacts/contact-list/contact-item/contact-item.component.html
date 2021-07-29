@@ -1,0 +1,18 @@
+<tr *ngIf="contact" >
+  <td>{{contact.id}}</td>
+  <td>{{contact.nom}}</td>
+  <td>{{contact.prenom}}</td>
+  <td>{{contact.dateDenaissance}}</td>
+  <td>{{contact.email}}</td>
+  <td>{{contact.tel}}</td>
+  <td>
+    <button  class="btn btn-sm btn-danger" (click)="OnDelete(contact)">
+      <span class="fa fa-trash-o"></span>
+    </button>
+  </td>
+  <td>
+    <button  class="btn btn-sm btn-danger" (click)="OnEdit(contact)">
+      <span class="fa fa-edit"></span>
+    </button>
+  </td>
+</tr>
